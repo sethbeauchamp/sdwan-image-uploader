@@ -6,3 +6,6 @@ python:
 # Install python packages for ansible and linters.
 install:
   - "pip install -r requirements.txt"
+
+script:
+  - "echo Update This soon"
