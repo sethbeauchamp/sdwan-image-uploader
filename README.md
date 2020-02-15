@@ -10,6 +10,7 @@ Clone to repository to your local machine. Use a virtual environment if desired.
 git clone https://github.com/sethbeauchamp/sdwan-image-uploader.git
 cd sdwan-image-uploader
 pip3 install -r requirements.txt
+mkdir Images
 ```
 
 Move any image files you wish to upload into the the Images folder within the sdwan-image-uploader folder.
