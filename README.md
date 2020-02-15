@@ -8,10 +8,10 @@ Upload IOS XE, vManage, and vEdge image files to vManage.
 Clone to repository to your local machine.
 ```
 git clone https://github.com/sethbeauchamp/sdwan-image-uploader.git
-cd
+cd sdwan-image-uploader
 ```
 
-Move any image files you wish to upload into the the Images folder.
+Move any image files you wish to upload into the the Images folder within the sdwan-image-uploader folder.
 
 ## Usage
 ```
