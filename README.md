@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sethbeauchamp/sdwan-image-uploader.svg?branch=master)](https://travis-ci.org/sethbeauchamp/sdwan-image-uploader)
+
 # Cisco SDWAN Image Uploader
 
 This tool allows you to upload one or more image files to a vManage server.
