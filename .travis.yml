@@ -8,4 +8,4 @@ install:
   - "pip install -r requirements.txt"
 
 script:
-  - "tests/make unit
+  - "tests/make unit"
