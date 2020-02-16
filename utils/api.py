@@ -8,6 +8,7 @@ Contains necessary functions to connect to a vManage server and upload files.
 '''
 
 class vmanage_session():
+
     def __init__(self, host, user, password, port, disable_warnings):
 
         self.host = host
@@ -47,19 +48,24 @@ class vmanage_session():
             print("Unable to retreive token: {0}".format(response.status_code))
 
     def upload(self, file_list):
+
         self.upload_url = '{0}/device/action/software/package'.format(self.base_url)
         number_of_items = len(file_list)
-        current_item = 0
+        item_counter = 0
+
         for file in file_list:
             try:
                 f = open('./Images/{0}'.format(file), 'rb')
             except FileNotFoundError:
                 print("File Not Found. Check the filename and path.")
-            current_item += 1
-            files = {'name':(os.path.basename(f.name), f)}
+
+            #Get file size, convert to MB, increment item counter
+            item_counter += 1
             size = int(os.stat('./Images/{0}'.format(file)).st_size / 1024)
+
+            files = {'name':(os.path.basename(f.name), f)}
             print("Now Uploading {0}. {1} KB ({2} of {3})".format(file, size,
-                                                                  current_item,
+                                                                  item_counter,
                                                                   number_of_items))
             try:
                 response = self.session.post(url=self.upload_url, headers=self.headers, files=files)
