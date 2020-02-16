@@ -1,16 +1,21 @@
 import os
 import sys
 
+'''
+Gets a list of files in the Images folder of types bin, tar, and gz.
+Returns them as a list.
+'''
+
 def get_file_list():
     try:
         dir_list = os.listdir('./Images')
-    except FileNotFoundError as e:
+    except FileNotFoundError:
         print("Images folder not found. Please create a folder named 'Images' \
 in the script's root directory and place the images you wish to \
 upload in this folder.")
         sys.exit(1)
     file_list = []
-    acceptable_extensions = ('bin','tar','gz')
+    acceptable_extensions = ('bin', 'tar', 'gz')
     for i in dir_list:
         if i.endswith(acceptable_extensions):
             file_list.append(i)
