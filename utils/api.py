@@ -63,7 +63,7 @@ class vmanage_session():
             item_counter += 1
             size = int(os.stat('./Images/{0}'.format(file)).st_size / 1024)
 
-            files = {'name':(os.path.basename(f.name), f)}
+            files = {'name':(f)}
             print("Now Uploading {0}. {1} KB ({2} of {3})".format(file, size,
                                                                   item_counter,
                                                                   number_of_items))
