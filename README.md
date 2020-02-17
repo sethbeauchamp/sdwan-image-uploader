@@ -39,3 +39,7 @@ python3 vupload.py --host vmanage-name.viptela.net --user admin --password admin
 ```
 python3 vupload.py --host vmanage-name.viptela.net --user admin --password admin --file_list file1.bin,file2.gz,file3.tar
 ```
+
+**Example of a full run:**
+
+![full-run-example](img/ex.png)
